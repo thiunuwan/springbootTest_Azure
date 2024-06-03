@@ -11,7 +11,8 @@ variables:
    - name: process.clean
      value: false
 
-pool: my-pc
+pool: 
+  vmImage: ubuntu-latest
 
 stages:
 - stage: Build
