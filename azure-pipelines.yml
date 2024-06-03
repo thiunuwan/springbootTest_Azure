@@ -21,6 +21,13 @@ stages:
   - job: Build
     displayName: Build Maven Project
     steps:
+    - task: JavaToolInstaller@0
+      displayName: 'Install Java JDK'
+      inputs:
+        versionSpec: '17' # or another version if needed
+        jdkArchitectureOption: 'x64'
+        jdkSourceOption: 'PreInstalled'
+
     - task: Maven@3
       #env:
       #  JAVA_HOME: /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
